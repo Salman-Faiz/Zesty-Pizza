@@ -6,6 +6,7 @@ import {
 import Home from './ui/Home';
 import Cart from './features/cart/Cart';
 import Order from './features/order/Order';
+import CreateOrder from './features/order/CreateOrder';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
         path: '/order/new',
         element: <Order />,
       
+      },
+      {
+        path: '/order/new',
+        element: <CreateOrder />,
+       
       },
       {
         path: '/order/:orderId',
