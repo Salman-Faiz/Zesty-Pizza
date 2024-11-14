@@ -4,15 +4,36 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './ui/Home';
+import Cart from './features/cart/Cart';
+import Order from './features/order/Order';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home></Home>
-  },
-  {
-    path: "/menu",
-    element: <Menu></Menu>
+    element: <AppLayout />,
+    errorElement: <Error />,
+
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/menu',
+        element: <Menu />,
+       
+      },
+      { path: '/cart', element: <Cart /> },
+      {
+        path: '/order/new',
+        element: <Order />,
+      
+      },
+      {
+        path: '/order/:orderId',
+        element: <Order />,
+       
+      },
+    ],
   },
 ]);
 
