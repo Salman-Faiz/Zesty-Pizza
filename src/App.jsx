@@ -7,6 +7,8 @@ import Home from './ui/Home';
 import Cart from './features/cart/Cart';
 import Order from './features/order/Order';
 import CreateOrder from './features/order/CreateOrder';
+import AppLayout from './ui/AppLayout';
+import Error from './ui/Error';
 
 const router = createBrowserRouter([
   {
