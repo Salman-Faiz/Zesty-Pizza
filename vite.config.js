@@ -14,4 +14,12 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    // Ensure Vercel uses local.json for production builds
+    rollupOptions: {
+      input: {
+        main: 'index.html'
+      }
+    }
+  }
 });
